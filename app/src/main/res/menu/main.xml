@@ -6,7 +6,7 @@
         android:orderInCategory="1"
         android:title="@string/action_settings"
         app:showAsAction="never" />
-
+    <!-- Aggiunto bottone About -->
     <item
         android:id="@+id/about"
         android:orderInCategory="2"
