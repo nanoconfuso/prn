@@ -120,7 +120,9 @@ public class MainActivity extends AppCompatActivity
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message text");
         emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"));
         // You can also attach multiple items by passing an ArrayList of Uris
+        startActivity(emailIntent);
     }
+
 }
 
 
