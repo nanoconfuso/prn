@@ -4,4 +4,5 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Impostazioni</string>
     <string name="title_activity_maps">Map</string>
+    <string name="about">About</string>
 </resources>
