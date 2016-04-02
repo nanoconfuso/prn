@@ -1,6 +1,7 @@
 package com.unipg.dansim.friendfinder;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -100,10 +101,25 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    /** Called when the user clicks the Apri mappa button */
+
+    /**
+     * Called when the user clicks the Apri mappa button
+     */
     public void openMap(View view) {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
+    }
+
+
+    public void sendEmail(View view) {
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        // The intent does not have a URI, so declare the "text/plain" MIME type
+       // emailIntent.setType(HTTP.PLAIN_TEXT_TYPE);//
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"jon@example.com"}); // recipients
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Email subject");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message text");
+        emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"));
+        // You can also attach multiple items by passing an ArrayList of Uris
     }
 }
 
