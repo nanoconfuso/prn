@@ -1,5 +1,9 @@
 package com.unipg.dansim.friendfinder;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -73,7 +77,18 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-
+        if (id == R.id.about){
+            AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+            alertDialog.setTitle("Friend Finder");
+            alertDialog.setMessage("Applicazione sviluppata da Daniele Mazzalupi e Simone Santuari");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Chiudi",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alertDialog.show();
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -122,7 +137,6 @@ public class MainActivity extends AppCompatActivity
         // You can also attach multiple items by passing an ArrayList of Uris
         startActivity(emailIntent);
     }
-
 }
 
 
