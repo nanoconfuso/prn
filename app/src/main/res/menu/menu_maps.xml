@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_condividipos"
+        android:icon="@drawable/ic_call_made"
+        android:title="Condividi la tua posizione" />
+    <item
+        android:id="@+id/nav_aggiornapos"
+        android:icon="@drawable/ic_call_received"
+        android:title="Aggiorna le posizioni" />
+</menu>
